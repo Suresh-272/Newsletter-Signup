@@ -37,7 +37,7 @@ app.post('/', function(req,res){
 
     const options = {
         method: "POST",
-        auth: "suresh1:b5914c80454c2a3a1c7791f13dd09fbe-us21"
+        auth: "suresh1:"+ process.env.API_KEY
     }
 
     const request = https.request(url, options, function(response){
@@ -65,8 +65,4 @@ app.post("/failure", function(req,res){
 app.listen(process.env.PORT || 3000, function(){
     console.log("Server is running...");
 })
-// API key
-// d18ab8329e61cd4706ae3eda310b04d1-us21
-// ac8f0b20fa47f83356457c4eb87f0071-us21
-// list Id
-// 707ca28408
+
